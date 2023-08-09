@@ -2,24 +2,43 @@
 <html>
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="UTF-8" />
+        <!-- augmente la durée de vie du cache à 1 mois -->
         <meta http-equiv="Cache-Control" content="max-age=2592000, public" />
-        <link rel="stylesheet" href="./assets/bootstrap/bootstrap.css" />
-        <link rel="stylesheet" href="./assets/style.css" />
+        <!-- diffère le css -->
+        <link
+            rel="preload"
+            href="./assets/bootstrap/bootstrap.min.css"
+            as="style"
+            onload="this.onload=null;this.rel='stylesheet'"
+        />
+        <noscript
+            ><link rel="stylesheet" href="./assets/bootstrap/bootstrap.min.css"
+        /></noscript>
+        <link
+            rel="preload"
+            href="./assets/style.css"
+            as="style"
+            onload="this.onload=null;this.rel='stylesheet'"
+        />
+        <noscript><link rel="stylesheet" href="./assets/style.css" /></noscript>
+        <!-- import des fonts -->
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link
-            href="https://fonts.googleapis.com/css2?family=Inter&family=Spectral:ital,wght@0,400;1,300;1,400;1,800&display=swap"
             rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Inter&family=Spectral:ital,wght@0,400;1,300;1,400;1,800&display=swap"
         />
-        <meta charset="UTF-8" />
-        <script src="./assets/bootstrap/bootstrap.bundle.js"></script>
+        <!-- gestion des scripts -->
+        <script defer src="./assets/bootstrap/bootstrap.bundle.min.js"></script>
         <script
+            defer
             src="https://code.jquery.com/jquery-3.4.1.min.js"
             integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
             crossorigin="anonymous"
         ></script>
-        <script src="./assets/maugallery.js"></script>
-        <script src="./assets/scripts.js"></script>
+        <script defer src="./assets/maugallery.js"></script>
+        <script defer src="./assets/scripts.js"></script>
     </head>
     <body>
         <div class="top-header">
@@ -38,6 +57,8 @@
                             ><img
                                 src="assets/images/instagram.png"
                                 alt="logo instagram"
+                                width="20"
+                                height="20"
                         /></a>
                     </li>
                 </ul>

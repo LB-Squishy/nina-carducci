@@ -68,7 +68,8 @@ body {
 }
 
 .picture img {
-    width: 100%;
+    width: 400px;
+    height: 400px;
 }
 #about-me {
     flex: 2;
@@ -263,8 +264,9 @@ input[type="submit"] {
     #about {
         flex-direction: column;
     }
-    .picture {
-        width: 50%;
+    .picture img {
+        width: 350px;
+        height: 350px;
     }
     .picture.left::before {
         width: 100%;
@@ -351,6 +353,12 @@ input[type="submit"] {
         width: 100%;
     }
     .picture {
-        width: 80%;
+        display: flex;
+        width: 100%;
+        justify-content: center;
+    }
+    .picture img {
+        width: 250px;
+        height: 250px;
     }
 }

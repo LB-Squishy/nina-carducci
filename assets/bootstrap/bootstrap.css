@@ -7289,6 +7289,7 @@ fieldset:disabled .btn {
 
 .w-100 {
     width: 100% !important;
+    aspect-ratio: 80/37;
 }
 
 .w-auto {
